@@ -1488,7 +1488,7 @@ function berechneBreakpoints(event) {
         }
         temp1 = 0;
         if (((fertigkeiten[document.myform.skill.value][2] == 0) || (fertigkeiten[document.myform.skill.value][2] == 2) || (fertigkeiten[document.myform.skill.value][2] == 3) || (fertigkeiten[document.myform.skill.value][2] == 4) || (fertigkeiten[document.myform.skill.value][2] == 5)) && (fertigkeiten[document.myform.skill.value][4] == 100)) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 ergebnis = berechneFPA(frames, i, start);
                 if ((temp1 != ergebnis) && (i - 100 - SIAS + WSMprimaer < 120)) {
                     breakpoints[breakpoints.length] = [Math.ceil(120 * (i - 100 - SIAS + WSMprimaer) / (120 - (i - 100 - SIAS + WSMprimaer))), ergebnis];
@@ -1497,7 +1497,7 @@ function berechneBreakpoints(event) {
             }
         }
         if ((fertigkeiten[document.myform.skill.value][2] == 1) && (document.myform.zweitwaffe.value == 0) && (fertigkeiten[document.myform.skill.value][4] == 100)) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 frames = waffengattung[waffen[document.myform.waffe.value][2]][document.myform.char.value][0];
                 if ((waffen[document.myform.waffe.value][2] == 3) && (document.myform.barbschwert.value == 1)) {
                     frames = 16;
@@ -1519,7 +1519,7 @@ function berechneBreakpoints(event) {
             }
         }
         if ((fertigkeiten[document.myform.skill.value][2] == 1) && (document.myform.zweitwaffe.value > 0) && (fertigkeiten[document.myform.skill.value][4] == 100)) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 frames = waffengattung[waffen[document.myform.waffe.value][2]][document.myform.char.value][0];
                 if ((waffen[document.myform.waffe.value][2] == 3) && (document.myform.barbschwert.value == 1)) {
                     frames = 16;
@@ -1579,7 +1579,7 @@ function berechneBreakpoints(event) {
             }
         }
         if ((fertigkeiten[document.myform.skill.value][2] == 7) && (document.myform.skill.value != 19)) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 ergebnis = berechneFPA(frames, i, 0);
                 ergebnis++;
                 if ((document.myform.skill.value == 3) && (document.myform.char.value < 7)) {
@@ -1601,7 +1601,7 @@ function berechneBreakpoints(event) {
             }
         }
         if (document.myform.skill.value == 19) {
-            for (i = 100 + IASprimaer - OIAS - WSMprimaer; i <= 9999; i++) {
+            for (i = 100 + IASprimaer - OIAS - WSMprimaer; i <= 175; i++) {
                 var temp = berechneFPA(frames, i, 0);
                 ergebnis = wirbelwind(temp);
                 if (temp1 != ergebnis) {
@@ -1611,7 +1611,7 @@ function berechneBreakpoints(event) {
             }
         }
         if (fertigkeiten[document.myform.skill.value][4] == 0) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 if (document.myform.skill.value == 14) {
                     frames = 4;
                 }
@@ -1644,7 +1644,7 @@ function berechneBreakpoints(event) {
             }
         }
         if (fertigkeiten[document.myform.skill.value][4] == 50) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 frames = aktionsframe[waffen[document.myform.waffe.value][2]][document.myform.char.value];
                 rollback1 = berechneFPA(frames, i, start);
                 rollback1++;
@@ -1671,7 +1671,7 @@ function berechneBreakpoints(event) {
             }
         }
         if (fertigkeiten[document.myform.skill.value][4] == 40) {
-            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 9999; i++) {
+            for (i = Math.max(100 + SIAS - WSMprimaer, 15); i <= 175; i++) {
                 frames = aktionsframe[waffen[document.myform.waffe.value][2]][document.myform.char.value];
                 rollback1 = berechneFPA(frames, i, start);
                 rollback1++;
